@@ -1,2 +1,2 @@
 #!/bin/bash
-rmdir /tmp/my_first_directory
+rmdir /tmp/my_first_directory 2>&1 | sed 's/\/tmp\/my_first_directory: //' | sed 's/No such file or directory/cannot open `\/tmp\/my_first_directory\' \(No such file or directory\)/'
